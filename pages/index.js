@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Pelmeni Pierogi Vareniki</title>
+        <link rel="icon" href="/favicon1.png" />
       </Head>
         <nav className="nav-wrapper">
             <div className="container">
