@@ -12,7 +12,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Pelmeni Pierogi Vareniki</title>
-        <link rel="icon" href="/favicon1.png" />
+        <link rel="icon" href="/images/favicon1.png" />
       </Head>
         <nav className="nav-wrapper">
             <div className="container">
@@ -44,13 +44,13 @@ export default function Home() {
                   return (
                       <div key={product.id} className={styles.card}>
                           <img src={product.image} alt={`Preview of ${product.title}`} />
-                          <h3>{ product.title }</h3>
-                          <p>{ product.ingredients }</p>
+                          <h3 className={styles.title}>{ product.title }</h3>
+                          <p><div><div className={styles.ingredients}>Состав: </div> { product.ingredients }</div></p>
                           <p></p>
                           <p>{ product.description }</p>
                           <p className={styles.ldescription}>zł { product.price } / кг</p>
                           <p><div className = {styles.quantity}>
-                              <NumericInput className="form-control"
+                              <div><NumericInput className="form-control"
                                   value={ 1.0 }
                                   min={ 0.5 }
                                   max={ 100 }
@@ -58,14 +58,15 @@ export default function Home() {
                                   precision={ 1 }
                                   size={ 5 }
                                   mobile
-                              />
-                              <button className="snipcart-add-item"
+                              /></div>
+                              <div>
+                              <button className="btn btn-outline-primary"
                                       data-item-id={product.id}
                                       data-item-image={product.image}
                                       data-item-name={product.title}
                                       data-item-url="/"
                                       data-item-price={product.price}
-                              >Добавить в корзину</button>
+                              >Добавить</button></div>
                           </div>
                           </p>
                       </div>
